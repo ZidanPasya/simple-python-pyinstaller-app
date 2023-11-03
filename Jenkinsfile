@@ -35,11 +35,11 @@ pipeline {
             }
             steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
-                sleep(60)
             }
             post {
                 success {
                     archiveArtifacts 'dist/add2vals'
+                    sleep(60)
                 }
             }
         }
